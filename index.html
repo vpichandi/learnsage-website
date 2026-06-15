@@ -751,6 +751,44 @@
   .author-name { font-size: 0.88rem; font-weight: 600; color: var(--forest); }
   .author-role { font-size: 0.78rem; color: var(--grey); }
 
+  /* ── WHY RAG ─────────────────────────────────── */
+  .why-rag-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 24px; margin-top: 52px;
+  }
+
+  .why-rag-card ul {
+    list-style: none; margin-top: 16px;
+  }
+
+  .why-rag-card ul li {
+    font-size: 0.88rem; color: rgba(255,255,255,0.6);
+    line-height: 1.7; padding: 8px 0 8px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    position: relative;
+  }
+
+  .why-rag-card ul li:last-child { border-bottom: none; }
+
+  .why-rag-card.problem ul li::before {
+    content: '✕'; position: absolute; left: 0;
+    font-size: 0.78rem; line-height: 1.9;
+    color: #DC2626;
+  }
+
+  .why-rag-card.solution ul li::before {
+    content: '✓'; position: absolute; left: 0;
+    font-size: 0.85rem; line-height: 1.8;
+    color: var(--light);
+  }
+
+  .why-rag-close {
+    text-align: center; margin-top: 48px;
+    font-size: 1.05rem; font-weight: 500;
+    color: var(--light);
+    max-width: 600px; margin-left: auto; margin-right: auto;
+  }
+
   /* ── RESPONSIVE ──────────────────────────────── */
   @media (max-width: 768px) {
     .nav-links { display: none; }
@@ -758,6 +796,7 @@
     .compare-table { font-size: 0.82rem; }
     .modal { padding: 32px 24px; }
     .footer-top { flex-direction: column; }
+    .why-rag-grid { grid-template-columns: 1fr; }
   }
 
   /* ── Custom scrollbar ───────────────────────────── */
@@ -792,6 +831,7 @@
   <ul class="nav-links">
     <li><a href="#how">How it Works</a></li>
     <li><a href="#features">Features</a></li>
+    <li><a href="#why-rag">Why RAG</a></li>
     <li><a href="#compare">Compare</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -913,6 +953,38 @@
       <span class="feature-badge">Full Tracking</span>
     </div>
   </div>
+</section>
+
+<!-- ── WHY RAG ───────────────────────────────────── -->
+<section class="section features-bg" id="why-rag">
+  <div class="center">
+    <div class="section-label" style="color:var(--light)">The RAG Advantage</div>
+    <h2 class="section-title" style="color:var(--white)">Why RAG Makes the Difference</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.55); margin:0 auto">ChatGPT, Claude, and other AI tools are incredibly powerful — but they only know what they were trained on. They've never read YOUR textbook.</p>
+  </div>
+  <div class="why-rag-grid">
+    <div class="feature-card why-rag-card problem">
+      <div class="feature-icon">🤖</div>
+      <h3>Generic AI</h3>
+      <ul>
+        <li>Tools like ChatGPT and Claude generate answers from general training data</li>
+        <li>They can't reference your specific textbook, lecture slides, or study guide</li>
+        <li>Answers may be correct in general but wrong for YOUR exam</li>
+        <li>No way to verify which page or chapter the answer came from</li>
+      </ul>
+    </div>
+    <div class="feature-card why-rag-card solution">
+      <div class="feature-icon">📚</div>
+      <h3>LearnSage RAG</h3>
+      <ul>
+        <li>RAG (Retrieval-Augmented Generation) searches YOUR uploaded documents first</li>
+        <li>Every answer is grounded in your actual study material</li>
+        <li>Citations show exactly which page and chapter each answer comes from</li>
+        <li>If the content isn't in your material, LearnSage tells you — no hallucination</li>
+      </ul>
+    </div>
+  </div>
+  <p class="why-rag-close">The result? Study content you can trust, built from the material you'll actually be tested on.</p>
 </section>
 
 <!-- ── COMPARE ───────────────────────────────────── -->
@@ -1185,7 +1257,7 @@
   </div>
   <div class="footer-bottom">
     <p>© 2026 LearnSage — All rights reserved.</p>
-    <p>Built with RAG + Local AI — Melbourne, Australia</p>
+    <p>Powered by RAG + Claude AI — Melbourne, Australia</p>
   </div>
 </footer>
 
