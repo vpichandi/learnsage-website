@@ -79,6 +79,24 @@
     box-shadow: 0 4px 16px rgba(116,198,157,0.4);
   }
 
+  .nav-burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 101;
+  }
+  .nav-burger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: rgba(255,255,255,0.85);
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.25s;
+  }
+
   /* ── HERO ────────────────────────────────────── */
   .hero {
     min-height: 100vh;
@@ -791,13 +809,37 @@
 
   /* ── RESPONSIVE ──────────────────────────────── */
   @media (max-width: 768px) {
-    .nav-links { display: none; }
+    .nav-burger { display: block; }
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(27, 58, 45, 0.98);
+      backdrop-filter: blur(12px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      z-index: 99;
+    }
+    .nav-links.open {
+      display: flex;
+    }
+    .nav-links a { font-size: 1.1rem; }
+    .nav-cta { margin-top: 8px; }
     .hero-stats { gap: 28px; }
     .compare-table { font-size: 0.82rem; }
     .modal { padding: 32px 24px; }
     .footer-top { flex-direction: column; }
     .why-rag-grid { grid-template-columns: 1fr; }
   }
+
+  .nav-burger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .nav-burger.open span:nth-child(2) { opacity: 0; }
+  .nav-burger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
   /* ── Custom scrollbar ───────────────────────────── */
   * {
@@ -838,6 +880,9 @@
     <li><a href="https://app.learnsage.app/login" style="color:#fff;text-decoration:none;font-weight:500;">Log In</a></li>
     <li><a href="https://app.learnsage.app/signup" class="nav-cta" style="text-decoration:none;">Start Free Trial</a></li>
   </ul>
+  <button class="nav-burger" onclick="toggleMobileNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- ── HERO ─────────────────────────────────────── -->
@@ -1262,6 +1307,18 @@
 </footer>
 
 <script>
+  // ── Mobile nav
+  function toggleMobileNav() {
+    document.querySelector('.nav-burger').classList.toggle('open');
+    document.querySelector('.nav-links').classList.toggle('open');
+  }
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.querySelector('.nav-burger').classList.remove('open');
+      document.querySelector('.nav-links').classList.remove('open');
+    });
+  });
+
   // ── FAQ
   function toggleFaq(btn) {
     const item = btn.parentElement;
