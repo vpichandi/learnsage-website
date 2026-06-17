@@ -829,7 +829,10 @@
       box-shadow: inset 0 0 0 5px red;
     }
     .nav-links.open {
-      display: flex;
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
     }
     .nav-links a { font-size: 1.1rem; }
     .nav-cta { margin-top: 8px; }
