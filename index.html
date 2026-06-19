@@ -827,7 +827,7 @@
       align-items: center;
       justify-content: center;
       gap: 24px;
-      background: var(--bg);
+      background: var(--forest);
       z-index: 999;
     }
 
@@ -853,29 +853,7 @@
 
   @media (max-width: 768px) {
     .nav-burger { display: block; }
-    .nav-links {
-      display: none;
-      position: fixed;
-      top: 70px;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: calc(100vh - 70px);
-      background: rgba(27, 58, 45, 1);
-      backdrop-filter: blur(12px);
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 28px;
-      z-index: 999;
-      overflow-y: auto;
-    }
-    .nav-links.open {
-      display: flex !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-      pointer-events: auto !important;
-    }
+    .nav-links { display: none; }
     .nav-links a { font-size: 1.1rem; }
     .nav-cta { margin-top: 8px; }
     .hero-stats { gap: 28px; }
