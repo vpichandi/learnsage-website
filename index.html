@@ -396,6 +396,10 @@
   .no  { color: #DC2626 !important; }
   .partial { color: var(--amber) !important; }
 
+  .compare-table-wrapper {
+    width: 100%;
+  }
+
   /* ── MODES ───────────────────────────────────── */
   .modes-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -808,6 +812,45 @@
   }
 
   /* ── RESPONSIVE ──────────────────────────────── */
+  @media (max-width: 1024px) {
+    /* Nav: show hamburger on tablet too */
+    .nav-burger { display: block; }
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100vw;
+      height: calc(100vh - 70px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      background: var(--bg);
+      z-index: 999;
+    }
+
+    /* Why RAG grid: responsive */
+    .why-rag-grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* Compare table: add horizontal scroll */
+    .compare-table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Hero stats: tighter gap */
+    .hero-stats { gap: 32px; }
+
+    /* Pricing grid: constrain width */
+    .pricing-grid {
+      max-width: 500px;
+    }
+  }
+
   @media (max-width: 768px) {
     .nav-burger { display: block; }
     .nav-links {
@@ -1046,75 +1089,77 @@
   <div class="section-label">Why LearnSage</div>
   <h2 class="section-title">Built for Learning.<br>Not Just Answering.</h2>
   <p class="section-sub">General AI tools answer questions. LearnSage builds a complete study system from your book.</p>
-  <table class="compare-table">
-    <thead>
-      <tr>
-        <th>Feature</th>
-        <th class="them">ChatGPT / Claude</th>
-        <th class="them">NotebookLM</th>
-        <th class="them">Quizlet</th>
-        <th class="us">LearnSage</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Answers from your specific PDF</td>
-        <td class="them no">✕</td>
-        <td class="them yes">✓</td>
-        <td class="them no">✕</td>
-        <td class="us yes">✓</td>
-      </tr>
-      <tr>
-        <td>Auto-generated quizzes from book</td>
-        <td class="them partial">Partial</td>
-        <td class="them partial">Partial</td>
-        <td class="them partial">Manual</td>
-        <td class="us yes">✓ Full</td>
-      </tr>
-      <tr>
-        <td>Spaced repetition flashcards</td>
-        <td class="them no">✕</td>
-        <td class="them no">✕</td>
-        <td class="them yes">✓</td>
-        <td class="us yes">✓</td>
-      </tr>
-      <tr>
-        <td>Structured guided lessons</td>
-        <td class="them no">✕</td>
-        <td class="them no">✕</td>
-        <td class="them no">✕</td>
-        <td class="us yes">✓</td>
-      </tr>
-      <tr>
-        <td>Full timed mock exam</td>
-        <td class="them no">✕</td>
-        <td class="them no">✕</td>
-        <td class="them no">✕</td>
-        <td class="us yes">✓</td>
-      </tr>
-      <tr>
-        <td>Chapter progress tracking</td>
-        <td class="them no">✕</td>
-        <td class="them no">✕</td>
-        <td class="them partial">Basic</td>
-        <td class="us yes">✓ Full</td>
-      </tr>
-      <tr>
-        <td>Personalised study plan</td>
-        <td class="them no">✕</td>
-        <td class="them no">✕</td>
-        <td class="them no">✕</td>
-        <td class="us yes">✓</td>
-      </tr>
-      <tr>
-        <td>Exam weightage support</td>
-        <td class="them no">✕</td>
-        <td class="them no">✕</td>
-        <td class="them no">✕</td>
-        <td class="us yes">✓</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="compare-table-wrapper">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th class="them">ChatGPT / Claude</th>
+          <th class="them">NotebookLM</th>
+          <th class="them">Quizlet</th>
+          <th class="us">LearnSage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Answers from your specific PDF</td>
+          <td class="them no">✕</td>
+          <td class="them yes">✓</td>
+          <td class="them no">✕</td>
+          <td class="us yes">✓</td>
+        </tr>
+        <tr>
+          <td>Auto-generated quizzes from book</td>
+          <td class="them partial">Partial</td>
+          <td class="them partial">Partial</td>
+          <td class="them partial">Manual</td>
+          <td class="us yes">✓ Full</td>
+        </tr>
+        <tr>
+          <td>Spaced repetition flashcards</td>
+          <td class="them no">✕</td>
+          <td class="them no">✕</td>
+          <td class="them yes">✓</td>
+          <td class="us yes">✓</td>
+        </tr>
+        <tr>
+          <td>Structured guided lessons</td>
+          <td class="them no">✕</td>
+          <td class="them no">✕</td>
+          <td class="them no">✕</td>
+          <td class="us yes">✓</td>
+        </tr>
+        <tr>
+          <td>Full timed mock exam</td>
+          <td class="them no">✕</td>
+          <td class="them no">✕</td>
+          <td class="them no">✕</td>
+          <td class="us yes">✓</td>
+        </tr>
+        <tr>
+          <td>Chapter progress tracking</td>
+          <td class="them no">✕</td>
+          <td class="them no">✕</td>
+          <td class="them partial">Basic</td>
+          <td class="us yes">✓ Full</td>
+        </tr>
+        <tr>
+          <td>Personalised study plan</td>
+          <td class="them no">✕</td>
+          <td class="them no">✕</td>
+          <td class="them no">✕</td>
+          <td class="us yes">✓</td>
+        </tr>
+        <tr>
+          <td>Exam weightage support</td>
+          <td class="them no">✕</td>
+          <td class="them no">✕</td>
+          <td class="them no">✕</td>
+          <td class="us yes">✓</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <!-- ── TESTIMONIALS ──────────────────────────────── -->
