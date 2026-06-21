@@ -925,7 +925,7 @@
   </h1>
   <p class="hero-sub">
     Upload any PDF — textbook, certification guide or study manual.
-    LearnSage turns it into a complete AI-powered study experience in seconds.
+    LearnSage turns it into a complete AI-powered study experience automatically.
   </p>
   <div class="hero-actions">
     <a href="https://app.learnsage.app/signup" class="btn-primary" style="text-decoration:none;">Start Free Trial →</a>
@@ -933,12 +933,12 @@
   </div>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">6</span>
+      <span class="hero-stat-num">7</span>
       <span class="hero-stat-label">Study Modes</span>
     </div>
     <div class="hero-stat">
       <span class="hero-stat-num">Any</span>
-      <span class="hero-stat-label">PDF or Book</span>
+      <span class="hero-stat-label">PDF</span>
     </div>
     <div class="hero-stat">
       <span class="hero-stat-num">100%</span>
@@ -958,7 +958,7 @@
 <!-- ── HOW IT WORKS ─────────────────────────────── -->
 <section class="section" id="how">
   <div class="section-label">How it works</div>
-  <h2 class="section-title">From PDF to Study-Ready<br>in 3 Steps</h2>
+  <h2 class="section-title">From PDF to Study-Ready<br>in 4 Steps</h2>
   <p class="section-sub">No setup. No configuration. Just upload your book and start learning immediately.</p>
   <div class="how-grid">
     <div class="how-step">
@@ -989,7 +989,7 @@
   <div class="center">
     <div class="section-label" style="color:var(--light)">Study Modes</div>
     <h2 class="section-title" style="color:var(--white)">Everything You Need<br>to Pass Your Exam</h2>
-    <p class="section-sub" style="color:rgba(255,255,255,0.55); margin:0 auto">Every mode is powered by RAG — every answer sourced directly from your uploaded PDF.</p>
+    <p class="section-sub" style="color:rgba(255,255,255,0.55); margin:0 auto">Every mode is powered by RAG — every answer grounded in your uploaded PDF.</p>
   </div>
   <div class="features-grid">
     <div class="feature-card">
@@ -1005,12 +1005,12 @@
     <div class="feature-card">
       <div class="feature-icon">💬</div>
       <h3>Chat Mode</h3>
-      <p>Ask anything. Get answers from your book via RAG. Low confidence? LearnSage automatically falls back to general AI knowledge — the best of both worlds.</p>
+      <p>Ask anything. Get answers from your book via RAG. Low confidence? LearnSage automatically falls back to general AI knowledge — clearly labelled so you know the source.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">📝</div>
       <h3>Chapter Quiz</h3>
-      <p>AI-generated questions from your actual content. Wrong answer review with full DMBOK-sourced explanations. Retake until you hit your pass mark.</p>
+      <p>AI-generated questions from your actual content. Wrong answer review with full explanations sourced from your study material. Retake until you hit your pass mark.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">🏆</div>
@@ -1027,6 +1027,11 @@
       <h3>Dashboard</h3>
       <p>Goal tracker, chapter progress bars, study streak and score trends. See exactly how close you are to your target — at a glance.</p>
     </div>
+    <div class="feature-card">
+      <div class="feature-icon">📓</div>
+      <h3>Notes</h3>
+      <p>A built-in notepad for each subject. Jot down key points while you study — auto-saved and always accessible.</p>
+    </div>
   </div>
 </section>
 
@@ -1035,7 +1040,7 @@
   <div class="center">
     <div class="section-label" style="color:var(--light)">The RAG Advantage</div>
     <h2 class="section-title" style="color:var(--white)">Why RAG Makes the Difference</h2>
-    <p class="section-sub" style="color:rgba(255,255,255,0.55); margin:0 auto">ChatGPT, Claude, and other AI tools are incredibly powerful — but they only know what they were trained on. They've never read YOUR textbook.</p>
+    <p class="section-sub" style="color:rgba(255,255,255,0.55); margin:0 auto">General AI tools can read your PDF — but they can't build a structured study system from it. No auto-generated lessons, no spaced-repetition flashcards, no timed mock exams, no chapter-by-chapter progress tracking.</p>
   </div>
   <div class="why-rag-grid">
     <div class="feature-card why-rag-card problem">
@@ -1043,7 +1048,7 @@
       <h3>Generic AI</h3>
       <ul>
         <li>Tools like ChatGPT and Claude generate answers from general training data</li>
-        <li>They can't reference your specific textbook, lecture slides, or study guide</li>
+        <li>They can answer questions from your PDF — but can't build structured lessons, flashcards, or mock exams from it</li>
         <li>Answers may be correct in general but wrong for YOUR exam</li>
         <li>No way to verify which page or chapter the answer came from</li>
       </ul>
@@ -1055,7 +1060,7 @@
         <li>RAG (Retrieval-Augmented Generation) searches YOUR uploaded documents first</li>
         <li>Every answer is grounded in your actual study material</li>
         <li>Citations show exactly which page and chapter each answer comes from</li>
-        <li>If the content isn't in your material, LearnSage tells you — no hallucination</li>
+        <li>Low-confidence answers are clearly labelled, so you always know what to trust.</li>
       </ul>
     </div>
   </div>
@@ -1081,7 +1086,7 @@
       <tbody>
         <tr>
           <td>Answers from your specific PDF</td>
-          <td class="them no">✕</td>
+          <td class="them partial">Partial</td>
           <td class="them yes">✓</td>
           <td class="them no">✕</td>
           <td class="us yes">✓</td>
@@ -1122,13 +1127,6 @@
           <td class="us yes">✓ Full</td>
         </tr>
         <tr>
-          <td>Personalised study plan</td>
-          <td class="them no">✕</td>
-          <td class="them no">✕</td>
-          <td class="them no">✕</td>
-          <td class="us yes">✓</td>
-        </tr>
-        <tr>
           <td>Exam weightage support</td>
           <td class="them no">✕</td>
           <td class="them no">✕</td>
@@ -1144,41 +1142,11 @@
 <section class="section testimonials">
   <div class="center">
     <div class="section-label">Early Users</div>
-    <h2 class="section-title">What Learners Say</h2>
+    <h2 class="section-title">Who It's For</h2>
   </div>
   <div class="testimonial-grid">
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"I uploaded my DMBOK and within minutes I had a full study plan, chapter summaries and quizzes. Passed my CDMP on the first attempt."</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">AK</div>
-        <div>
-          <div class="author-name">Arjun K.</div>
-          <div class="author-role">CDMP Practitioner, Melbourne</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"The hybrid chat is incredible — it searches my textbook first and falls back to general AI if it can't find the answer. It feels like a real tutor."</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">SP</div>
-        <div>
-          <div class="author-name">Sarah P.</div>
-          <div class="author-role">Masters Student, Sydney</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card">
-      <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"I used it for my AWS certification. The mock exam with real weightage made a massive difference. Way better than any other tool I tried."</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">MR</div>
-        <div>
-          <div class="author-name">Michael R.</div>
-          <div class="author-role">Cloud Engineer, Brisbane</div>
-        </div>
-      </div>
+    <div style="text-align:center; max-width:640px; margin:0 auto; font-size:1.05rem; line-height:1.75; color:var(--charcoal);">
+      <strong>Built for serious learners.</strong><br>LearnSage is designed for students and professionals preparing for exams like CDMP, PMP, AWS, and CFA — or anyone studying from a PDF textbook.
     </div>
   </div>
 </section>
@@ -1195,9 +1163,10 @@
       <div class="pricing-name">Free Trial</div>
       <div class="pricing-price">7 days</div>
       <ul class="pricing-features">
-        <li>Full Pro access</li>
+        <li>Trial access</li>
         <li>1 subject</li>
         <li>1 PDF upload</li>
+        <li>100-page PDF limit</li>
         <li>All study modes</li>
         <li>No credit card required</li>
       </ul>
@@ -1208,8 +1177,8 @@
       <div class="pricing-name">Pro</div>
       <div class="pricing-price">A$22<span>/month</span></div>
       <ul class="pricing-features">
-        <li>Unlimited subjects</li>
-        <li>Unlimited PDFs</li>
+        <li>Multiple subjects</li>
+        <li>Multiple PDFs per subject</li>
 
         <li>Recharge anytime</li>
         <li>Anki export</li>
@@ -1238,21 +1207,21 @@
         What types of PDFs can I upload?
         <span class="faq-icon">+</span>
       </button>
-      <div class="faq-a">Any PDF — textbooks, certification guides, training manuals, course notes, compliance documents or any book you want to study. LearnSage works with any readable PDF content.</div>
+      <div class="faq-a">Any PDF — textbooks, certification guides, training manuals, course notes, compliance documents or any book you want to study. LearnSage works with any readable PDF content. During your free trial, you can upload 1 PDF up to 100 pages. Pro users can upload unlimited PDFs.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
         How is this different from just using ChatGPT?
         <span class="faq-icon">+</span>
       </button>
-      <div class="faq-a">ChatGPT answers from general training data — not from your specific book. LearnSage uses RAG (Retrieval Augmented Generation) to search your exact PDF for every answer. It also provides a complete study system — structured lessons, spaced repetition flashcards, timed mock exams and chapter progress tracking. ChatGPT provides none of that.</div>
+      <div class="faq-a">ChatGPT and Claude can read your PDF and answer questions. LearnSage goes further — it automatically builds a complete study system from your material: structured lessons, spaced-repetition flashcards, chapter quizzes, timed mock exams, and progress tracking. It's the difference between a chatbot and a study coach.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
         Is my PDF stored securely?
         <span class="faq-icon">+</span>
       </button>
-      <div class="faq-a">Your PDF is stored privately and is only accessible by you. We use encrypted cloud storage with private buckets per user. Your content is never shared with other users or used to train AI models.</div>
+      <div class="faq-a">Your PDF is stored privately on our secure servers, isolated in a dedicated directory only accessible by your account. Your content is never shared with other users or used to train AI models. Our AI provider, Anthropic, does not use API data for model training.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
@@ -1287,7 +1256,7 @@
         How does the usage limit work?
         <span class="faq-icon">+</span>
       </button>
-      <div class="faq-a">LearnSage works like a mobile data plan. Your Pro subscription includes a generous monthly allowance shared across all your subjects and study modes — no per-feature restrictions. Lessons, quizzes, flashcards, mock exams — use them how you like. When your monthly plan is used, cached study content stays fully accessible. Top up anytime or wait for your next month to begin.</div>
+      <div class="faq-a">Your A$22/month subscription includes a monthly AI processing budget. This covers all study modes — lessons, flashcards, quizzes, mock exams, summaries, and chat. Most users find the monthly budget more than sufficient. If you need more, you can top up anytime at affordable rates. Your budget resets each billing cycle.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
