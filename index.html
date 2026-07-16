@@ -442,12 +442,17 @@
   .pricing-bg { background: var(--pale); }
 
   .pricing-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr);
-    gap: 24px; margin-top: 52px; max-width: 600px; margin-left: auto; margin-right: auto;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px; margin-top: 52px; max-width: 900px; margin-left: auto; margin-right: auto;
   }
 
-  @media (max-width: 520px) {
-    .pricing-grid { grid-template-columns: 1fr; }
+  @media (max-width: 760px) {
+    .pricing-grid { grid-template-columns: 1fr; max-width: 420px !important; }
+  }
+
+  .pricing-credits {
+    font-size: 0.85rem; font-weight: 600; color: var(--sage);
+    margin-bottom: 20px;
   }
 
   .pricing-card {
@@ -847,7 +852,7 @@
 
     /* Pricing grid: constrain width */
     .pricing-grid {
-      max-width: 500px;
+      max-width: 760px;
     }
   }
 
@@ -1162,6 +1167,7 @@
     <div class="pricing-card">
       <div class="pricing-name">Free Trial</div>
       <div class="pricing-price">7 days</div>
+      <div class="pricing-credits">3,000 credits</div>
       <ul class="pricing-features">
         <li>Trial access</li>
         <li>Unlimited subjects</li>
@@ -1172,10 +1178,25 @@
       </ul>
       <a href="https://app.learnsage.app/signup" class="pricing-btn outline" style="text-decoration:none;display:block;text-align:center;">Start Free Trial</a>
     </div>
+    <div class="pricing-card">
+      <div class="pricing-name">Basic</div>
+      <div class="pricing-price">A$15<span>/month</span></div>
+      <div class="pricing-credits">8,000 credits/month</div>
+      <ul class="pricing-features">
+        <li>Multiple subjects</li>
+        <li>Multiple PDFs per subject</li>
+        <li>Up to 750 pages per subject</li>
+        <li>Recharge anytime</li>
+        <li>Anki export</li>
+        <li>Cancel anytime</li>
+      </ul>
+      <a href="https://app.learnsage.app/signup" class="pricing-btn outline" style="text-decoration:none;display:block;text-align:center;">Start Free Trial</a>
+    </div>
     <div class="pricing-card featured">
       <div class="pricing-badge">Most Popular</div>
       <div class="pricing-name">Pro</div>
       <div class="pricing-price">A$22<span>/month</span></div>
+      <div class="pricing-credits">20,000 credits/month</div>
       <ul class="pricing-features">
         <li>Multiple subjects</li>
         <li>Multiple PDFs per subject</li>
@@ -1191,9 +1212,10 @@
   <p style="text-align:center; font-size:0.82rem; opacity:0.7; margin-top:0.5rem;">Prices shown in your local currency at checkout.</p>
   <div class="pricing-analogy">
     <strong>📱 Think of it like your mobile data plan.</strong>
-    You get a generous usage limit — use it for lessons, flashcards, quizzes,
-    or mock exams across any subject. Once your plan is used, cached content
-    stays available. Top up anytime, or your plan resets next month.
+    You get a set number of credits each month — spend them on lessons,
+    flashcards, quizzes, or mock exams across any subject. Bigger documents
+    use more credits. Once your credits are used, cached content stays
+    available. Top up anytime, or your credits reset next month.
   </div>
 </section>
 
@@ -1209,7 +1231,7 @@
         What types of PDFs can I upload?
         <span class="faq-icon">+</span>
       </button>
-      <div class="faq-a">Any PDF — textbooks, certification guides, training manuals, course notes, compliance documents or any book you want to study. LearnSage works with any readable PDF content. During your free trial, you get unlimited subjects and documents with a 200-page total across your whole trial. Pro users get unlimited subjects and documents, with up to 750 pages per subject.</div>
+      <div class="faq-a">Any PDF — textbooks, certification guides, training manuals, course notes, compliance documents or any book you want to study. LearnSage works with any readable PDF content. During your free trial, you get unlimited subjects and documents with a 200-page total across your whole trial. Basic and Pro subscribers get unlimited subjects and documents, with up to 750 pages per subject.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
@@ -1255,10 +1277,10 @@
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
-        How does the usage limit work?
+        How do credits work?
         <span class="faq-icon">+</span>
       </button>
-      <div class="faq-a">Your A$22/month subscription includes a generous usage limit. This covers all study modes — lessons, flashcards, quizzes, mock exams, summaries, and chat. Most users find their usage limit more than sufficient. If you need more, you can top up anytime at affordable rates. Your usage resets each billing cycle. Prices are displayed in your local currency at checkout.</div>
+      <div class="faq-a">Every paid plan (Basic or Pro) includes a monthly pool of credits, spent across all study modes — lessons, flashcards, quizzes, mock exams, summaries, and chat. Bigger documents use more credits per generation. Most users find their credits more than sufficient. If you need more, you can top up anytime at affordable rates. Your credits reset each billing cycle. Prices are displayed in your local currency at checkout.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">
